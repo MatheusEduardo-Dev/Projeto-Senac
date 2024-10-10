@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- tabela de consulta -->
+<table>
+  <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Ações</th>
+  </tr>
+  {% for curso in cursos %}
+  <tr>
+      <td>{{ curso.nome }}</td>
+      <td>{{ curso.preco }}</td>
+      <td>
+          <a href="{% url 'editar_curso' curso.id %}">Editar</a>
+          <a href="{% url 'excluir_curso' curso.id %}">Excluir</a>
+      </td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="{% url 'adicionar_curso' %}">Adicionar Novo Curso</a>
+  <!-- fim da tabela -->
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+
+{% if  produtos %}
+
+<!-- tabela de consulta -->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Descrição</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+      <tr>
+        <th scope="row">{{curso.id}}</th>
+        <td>{{curso.nome}}</td>
+        <td>{{curso.preco}}</td>
+        <td>{{curso.descricao}}</td>
+       
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% else %}
+<p>    
+<div class="container-fluid alert alert-danger" role="alert">
+    CURSO NÃO ENCONTRADO
+  </div>
+{% endif %}
+
+</div>
+{% endblock %}

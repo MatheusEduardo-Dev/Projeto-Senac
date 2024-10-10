@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Ações</th>
+    </tr>
+    {% for curso in cursos %}
+    <tr>
+        <td>{{ curso.nome }}</td>
+        <td>{{ curso.preco }}</td>
+        <td>
+            <a href="{% url 'editar_curso' %}">Editar</a>
+            <a href="{% url 'excluir_curso' %}">Excluir</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'adicionar_curso' %}">Adicionar Novo Curso</a>
+
+{% endblock %}
