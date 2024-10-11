@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Produto</title>
+</head>
+
+<body>
+  {% if not hide_menu %}
+  {% include 'menu.html' %}
+  {% endif %}
+
+  <div class="container">
+    <div class="">
+      <img src="/static/python.jpeg" class="d-block w-100" alt="Campanha de Matrículas"
+        style="width: 1500px;height: 500px">
+    </div>
+    <br>
+
+    <section id="sobre" class="container my-5">
+      <h2>Descrição do Curso:</h2>
+      <p>
+        No mundo digital atual, o domínio da programação é essencial para inovar e resolver problemas complexos.
+        O Curso de Python Aplicado, ministrado pelo renomado Mestre da Tecnologia Pisco, é a oportunidade perfeita para
+        você dar os primeiros passos ou aprofundar seus conhecimentos na linguagem de programação mais popular do mundo.
+      </p>
+    </section>
+
+    <div class="container-fluid bg-warning text-secondary">
+      <br>
+      <h1 id="conteúdo">Conteúdo completo dos cursos:</h1>
+      <br><br>
+      <div class="media text-end">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Introdução ao Python</h5>
+          Neste módulo, você aprenderá os fundamentos da linguagem Python, abordando a sintaxe básica, estruturas de
+          dados como listas, dicionários e tuplas, e controle de fluxo por meio de condicionais e loops.
+        </div>
+        <img class="ms-3" src="/static/imagick_convert.jpeg" alt="Imagem de exemplo genérica" width="164px"
+          height="164px">
+      </div>
+
+      <br>
+
+      <div class="media">
+        <img class="mr-3" src="/static/imagick_convert.jpeg" alt="Imagem de exemplo genérica" width="164px"
+          height="164px">
+        <div class="media-body">
+          <h5 class="mt-0">Desenvolvimento de Aplicações Web</h5>
+          Aqui, você vai colocar em prática o que aprendeu, criando projetos que vão desde scripts simples até
+          aplicações web.
+        </div>
+      </div>
+
+      <br>
+
+      <div class="media">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Análise de Dados</h5>
+          Aprenda a usar bibliotecas como Pandas e NumPy para trabalhar com dados.
+        </div>
+        <img class="ml-3" src="/static/imagick_convert.jpeg" alt="Imagem de exemplo genérica" width="164px"
+          height="164px">
+      </div>
+
+      <br>
+
+      <div class="media">
+        <img class="mr-3" src="/static/imagick_convert.jpeg" alt="Imagem de exemplo genérica" width="164px"
+          height="164px">
+        <div class="media-body">
+          <h5 class="mt-0">Automação de Tarefas</h5>
+          Neste módulo, você vai aprender a automatizar tarefas repetitivas, tornando seu trabalho mais eficiente.
+        </div>
+      </div>
+
+      <br>
+
+      <div class="media">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Desenvolvimento de Aplicações Web Avançadas</h5>
+          Aprofunde-se em conceitos mais avançados de desenvolvimento web.
+        </div>
+        <img class="ml-3" src="/static/imagick_convert.jpeg" alt="Imagem de exemplo genérica" width="164px"
+          height="164px">
+      </div>
+      <br>
+    </div>
+
+    <br><br>
+
+    <div class="container-fluid bg-warning">
+      <div class="row">
+        <div class="col-sm">
+          <h2>Objetivos do Curso:</h2>
+          <h5>
+            Introdução ao Python: Aprenda os fundamentos da linguagem, incluindo sintaxe, estruturas de dados e controle
+            de fluxo.
+            Desenvolvimento de Aplicações: Aplique seus conhecimentos em projetos práticos.
+            Análise de Dados: Utilize bibliotecas como Pandas e NumPy para manipulação e análise de dados.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+
+
+
+  </div>
+
+
+</body>
+<footer>
+  <form method="post" .was-validated>
+    {% csrf_token %}
+    <form>
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" placeholder="Nome" required>
+          </div>
+          <div class="col">
+            <label for="Sobrenome">Sobrenome</label>
+            <input type="text" class="form-control" placeholder="Sobrenome" required>
+          </div>
+        </div>
+      </form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Ex: Rua" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Cidade</label>
+          <input type="text" class="form-control" id="inputCity" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputEstado">Estado</label>
+          <select id="inputEstado" class="form-control">
+            <option selected>Escolher...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputCEP">CEP</label>
+          <input type="text" class="form-control" id="inputCEP" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Concluir</button>
+    </form>
+</footer>
+{%block body%}
+{%endblock%}
+
+
+
+
+
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+
+      var forms = document.getElementsByClassName('needs-validation');
+
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>
+
+</body>
+
+</html>
